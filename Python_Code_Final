@@ -1,0 +1,2968 @@
+from bs4 import BeautifulSoup
+import requests
+import numpy
+import pandas
+import csv
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+#find text, get only text, append to array
+a1 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b1 = text.get_text()
+    a1.append(b1)
+
+print(a1)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a2 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b2 = text.get_text()
+    a2.append(b2)
+    
+print(a2)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a3 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b3 = text.get_text()
+    a3.append(b3)
+    
+print(a3)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a4 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b4 = text.get_text()
+    a4.append(b4)
+    
+print(a4)
+
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_August_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a5 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b5 = text.get_text()
+    a5.append(b5)
+    
+print(a5)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a6 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b6 = text.get_text()
+    a6.append(b6)
+    
+print(a6)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a7 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b7 = text.get_text()
+    a7.append(b7)
+    
+print(a7)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a8 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b8 = text.get_text()
+    a8.append(b8)
+    
+print(a8)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a9 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b9 = text.get_text()
+    a9.append(b9)
+    
+print(a9)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b10 = text.get_text()
+    a10.append(b10)
+    
+print(a10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b11 = text.get_text()
+    a11.append(b11)
+    
+print(a11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+a12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    b12 = text.get_text()
+    a12.append(b12)
+    
+print(a12)
+
+deaths_in_2018 = numpy.concatenate((a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan17b = text.get_text()
+    jan17.append(jan17b)
+    
+print(jan17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_201'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb17b = text.get_text()
+    feb17.append(feb17b)
+    
+print(feb17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar17b = text.get_text()
+    mar17.append(mar17b)
+    
+print(mar17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr17b = text.get_text()
+    apr17.append(apr17b)
+    
+print(apr17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may17b = text.get_text()
+    may17.append(may17b)
+    
+print(may17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun17b = text.get_text()
+    jun17.append(jun17b)
+    
+print(jun17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul17b = text.get_text()
+    jul17.append(jul17b)
+    
+print(jul17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_August_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug17b = text.get_text()
+    aug17.append(aug17b)
+    
+print(aug17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep17b = text.get_text()
+    sep17.append(sep17b)
+    
+print(sep17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct17b = text.get_text()
+    oct17.append(oct17b)
+    
+print(oct17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2018'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov17b = text.get_text()
+    nov17.append(nov17b)
+    
+print(nov17)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2017'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec17 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec17b = text.get_text()
+    dec17.append(dec17b)
+    
+print(dec17)
+
+deaths_in_2017 = numpy.concatenate((jan17,feb17,mar17,apr17,may17,jun17,jul17,aug17,sep17,oct17,nov17,dec17), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan16b = text.get_text()
+    jan16.append(jan16b)
+    
+print(jan16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb16b = text.get_text()
+    feb16.append(feb16b)
+    
+print(feb16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar16b = text.get_text()
+    mar16.append(mar16b)
+    
+print(mar16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr16b = text.get_text()
+    apr16.append(apr16b)
+    
+print(apr16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may16b = text.get_text()
+    may16.append(may16b)
+    
+print(may16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun16b = text.get_text()
+    jun16.append(jun16b)
+    
+print(jun16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul16b = text.get_text()
+    jul16.append(jul16b)
+    
+print(jul16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug16b = text.get_text()
+    aug16.append(aug16b)
+    
+print(aug16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep16b = text.get_text()
+    sep16.append(sep16b)
+    
+print(sep16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct16b = text.get_text()
+    oct16.append(oct16b)
+    
+print(oct16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov16b = text.get_text()
+    nov16.append(nov16b)
+    
+print(nov16)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2016'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec16 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec16b = text.get_text()
+    dec16.append(dec16b)
+    
+print(dec16)
+
+deaths_in_2016 = numpy.concatenate((jan16,feb16,mar16,apr16,may16,jun16,jul16,aug16,sep16,oct16,nov16,dec16), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan15b = text.get_text()
+    jan15.append(jan15b)
+    
+print(jan15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb15b = text.get_text()
+    feb15.append(feb15b)
+    
+print(feb15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar15b = text.get_text()
+    mar15.append(mar15b)
+    
+print(mar15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr15b = text.get_text()
+    apr15.append(apr15b)
+    
+print(apr15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may15b = text.get_text()
+    may15.append(may15b)
+    
+print(may15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun15b = text.get_text()
+    jun15.append(jun15b)
+    
+print(jun15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul15b = text.get_text()
+    jul15.append(jul15b)
+    
+print(jul15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug15b = text.get_text()
+    aug15.append(aug15b)
+    
+print(aug15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep15b = text.get_text()
+    sep15.append(sep15b)
+    
+print(sep15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct15b = text.get_text()
+    oct15.append(oct15b)
+    
+print(oct15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov15b = text.get_text()
+    nov15.append(nov15b)
+    
+print(nov15)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2015'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec15 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec15b = text.get_text()
+    dec15.append(dec15b)
+    
+print(dec15)
+
+deaths_in_2015 = numpy.concatenate((jan15,feb15,mar15,apr15,may15,jun15,jul15,aug15,sep15,oct15,nov15,dec15), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan14b = text.get_text()
+    jan14.append(jan14b)
+    
+print(jan14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb14b = text.get_text()
+    feb14.append(feb14b)
+    
+print(feb14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar14b = text.get_text()
+    mar14.append(mar14b)
+    
+print(mar14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr14b = text.get_text()
+    apr14.append(apr14b)
+    
+print(apr14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may14b = text.get_text()
+    may14.append(may14b)
+    
+print(may14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun14b = text.get_text()
+    jun14.append(jun14b)
+    
+print(jun14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul14b = text.get_text()
+    jul14.append(jul14b)
+    
+print(jul14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug14b = text.get_text()
+    aug14.append(aug14b)
+    
+print(aug14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep14b = text.get_text()
+    sep14.append(sep14b)
+    
+print(sep14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct14b = text.get_text()
+    oct14.append(oct14b)
+    
+print(oct14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov14b = text.get_text()
+    nov14.append(nov14b)
+    
+print(nov14)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2014'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec14 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec14b = text.get_text()
+    dec14.append(dec14b)
+    
+print(dec14)
+
+deaths_in_2014 = numpy.concatenate((jan14,feb14,mar14,apr14,may14,jun14,jul14,aug14,sep14,oct14,nov14,dec14), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan13b = text.get_text()
+    jan13.append(jan13b)
+    
+print(jan13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb13b = text.get_text()
+    feb13.append(feb13b)
+    
+print(feb13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar13b = text.get_text()
+    mar13.append(mar13b)
+    
+print(mar13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr13b = text.get_text()
+    apr13.append(apr13b)
+    
+print(apr13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may13b = text.get_text()
+    may13.append(may13b)
+    
+print(may13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun13b = text.get_text()
+    jun13.append(jun13b)
+    
+print(jun13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul13b = text.get_text()
+    jul13.append(jul13b)
+    
+print(jul13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug13b = text.get_text()
+    aug13.append(aug13b)
+    
+print(aug13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep13b = text.get_text()
+    sep13.append(sep13b)
+    
+print(sep13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct13b = text.get_text()
+    oct13.append(oct13b)
+    
+print(oct13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov13b = text.get_text()
+    nov13.append(nov13b)
+    
+print(nov13)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2013'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec13 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec13b = text.get_text()
+    dec13.append(dec13b)
+    
+print(dec13)
+
+deaths_in_2013 = numpy.concatenate((jan13,feb13,mar13,apr13,may13,jun13,jul13,aug13,sep13,oct13,nov13,dec13), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan12b = text.get_text()
+    jan12.append(jan12b)
+    
+print(jan12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb12b = text.get_text()
+    feb12.append(feb12b)
+    
+print(feb12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar12b = text.get_text()
+    mar12.append(mar12b)
+    
+print(mar12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr12b = text.get_text()
+    apr12.append(apr12b)
+    
+print(apr12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may12b = text.get_text()
+    may12.append(may12b)
+    
+print(may12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun12b = text.get_text()
+    jun12.append(jun12b)
+    
+print(jun12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul12b = text.get_text()
+    jul12.append(jul12b)
+    
+print(jul12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug12b = text.get_text()
+    aug12.append(aug12b)
+    
+print(aug12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep12b = text.get_text()
+    sep12.append(sep12b)
+    
+print(sep12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct12b = text.get_text()
+    oct12.append(oct12b)
+    
+print(oct12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov12b = text.get_text()
+    nov12.append(nov12b)
+    
+print(nov12)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2012'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec12 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec12b = text.get_text()
+    dec12.append(dec12b)
+    
+print(dec12)
+
+deaths_in_2012 = numpy.concatenate((jan12,feb12,mar12,apr12,may12,jun12,jul12,aug12,sep12,oct12,nov12,dec12), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan11b = text.get_text()
+    jan11.append(jan11b)
+    
+print(jan11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb11b = text.get_text()
+    feb11.append(feb11b)
+    
+print(feb11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar11b = text.get_text()
+    mar11.append(mar11b)
+    
+print(mar11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr11b = text.get_text()
+    apr11.append(apr11b)
+    
+print(apr11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may11b = text.get_text()
+    may11.append(may11b)
+    
+print(may11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun11b = text.get_text()
+    jun11.append(jun11b)
+    
+print(jun11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul11b = text.get_text()
+    jul11.append(jul11b)
+    
+print(jul11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug11b = text.get_text()
+    aug11.append(aug11b)
+    
+print(aug11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep11b = text.get_text()
+    sep11.append(sep11b)
+    
+print(sep11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct11b = text.get_text()
+    oct11.append(oct11b)
+    
+print(oct11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov11b = text.get_text()
+    nov11.append(nov11b)
+    
+print(nov11)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2011'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec11 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec11b = text.get_text()
+    dec11.append(dec11b)
+    
+print(dec11)
+
+deaths_in_2011 = numpy.concatenate((jan11,feb11,mar11,apr11,may11,jun11,jul11,aug11,sep11,oct11,nov11,dec11), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan10b = text.get_text()
+    jan10.append(jan10b)
+    
+print(jan10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb10b = text.get_text()
+    feb10.append(feb10b)
+    
+print(feb10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar10b = text.get_text()
+    mar10.append(mar10b)
+    
+print(mar10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr10b = text.get_text()
+    apr10.append(apr10b)
+    
+print(apr10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may10b = text.get_text()
+    may10.append(may10b)
+    
+print(may10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun10b = text.get_text()
+    jun10.append(jun10b)
+    
+print(jun10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul10b = text.get_text()
+    jul10.append(jul10b)
+    
+print(jul10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug10b = text.get_text()
+    aug10.append(aug10b)
+    
+print(aug10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep10b = text.get_text()
+    sep10.append(sep10b)
+    
+print(sep10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct10b = text.get_text()
+    oct10.append(oct10b)
+    
+print(oct10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov10b = text.get_text()
+    nov10.append(nov10b)
+    
+print(nov10)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2010'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec10 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec10b = text.get_text()
+    dec10.append(dec10b)
+    
+print(dec10)
+
+deaths_in_2010 = numpy.concatenate((jan10,feb10,mar10,apr10,may10,jun10,jul10,aug10,sep10,oct10,nov10,dec10), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan09b = text.get_text()
+    jan09.append(jan09b)
+    
+print(jan09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb09b = text.get_text()
+    feb09.append(feb09b)
+    
+print(feb09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar09b = text.get_text()
+    mar09.append(mar09b)
+    
+print(mar09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr09b = text.get_text()
+    apr09.append(apr09b)
+    
+print(apr09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may09b = text.get_text()
+    may09.append(may09b)
+    
+print(may09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun09b = text.get_text()
+    jun09.append(jun09b)
+    
+print(jun09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul09b = text.get_text()
+    jul09.append(jul09b)
+    
+print(jul09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug09b = text.get_text()
+    aug09.append(aug09b)
+    
+print(aug09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep09b = text.get_text()
+    sep09.append(sep09b)
+    
+print(sep09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct09b = text.get_text()
+    oct09.append(oct09b)
+    
+print(oct09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov09b = text.get_text()
+    nov09.append(nov09b)
+    
+print(nov09)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2009'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec09 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec09b = text.get_text()
+    dec09.append(dec09b)
+    
+print(dec09)
+
+deaths_in_2009 = numpy.concatenate((jan09,feb09,mar09,apr09,may09,jun09,jul09,aug09,sep09,oct09,nov09,dec09), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan08b = text.get_text()
+    jan08.append(jan08b)
+    
+print(jan08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb08b = text.get_text()
+    feb08.append(feb08b)
+    
+print(feb08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar08b = text.get_text()
+    mar08.append(mar08b)
+    
+print(mar08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr08b = text.get_text()
+    apr08.append(apr08b)
+    
+print(apr08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may08b = text.get_text()
+    may08.append(may08b)
+    
+print(may08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun08b = text.get_text()
+    jun08.append(jun08b)
+    
+print(jun08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul08b = text.get_text()
+    jul08.append(jul08b)
+    
+print(jul08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug08b = text.get_text()
+    aug08.append(aug08b)
+    
+print(aug08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep08b = text.get_text()
+    sep08.append(sep08b)
+    
+print(sep08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct08b = text.get_text()
+    oct08.append(oct08b)
+    
+print(oct08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov08b = text.get_text()
+    nov08.append(nov08b)
+    
+print(nov08)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2008'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec08 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec08b = text.get_text()
+    dec08.append(dec08b)
+    
+print(dec08)
+
+deaths_in_2008 = numpy.concatenate((jan08,feb08,mar08,apr08,may08,jun08,jul08,aug08,sep08,oct08,nov08,dec08), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan07b = text.get_text()
+    jan07.append(jan07b)
+    
+print(jan07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb07b = text.get_text()
+    feb07.append(feb07b)
+    
+print(feb07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar07b = text.get_text()
+    mar07.append(mar07b)
+    
+print(mar07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr07b = text.get_text()
+    apr07.append(apr07b)
+    
+print(apr07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may07b = text.get_text()
+    may07.append(may07b)
+    
+print(may07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun07b = text.get_text()
+    jun07.append(jun07b)
+    
+print(jun07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul07b = text.get_text()
+    jul07.append(jul07b)
+    
+print(jul07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug07b = text.get_text()
+    aug07.append(aug07b)
+    
+print(aug07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep07b = text.get_text()
+    sep07.append(sep07b)
+    
+print(sep07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct07b = text.get_text()
+    oct07.append(oct07b)
+    
+print(oct07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov07b = text.get_text()
+    nov07.append(nov07b)
+    
+print(nov07)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2007'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec07 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec07b = text.get_text()
+    dec07.append(dec07b)
+    
+print(dec07)
+
+deaths_in_2007 = numpy.concatenate((jan07,feb07,mar07,apr07,may07,jun07,jul07,aug07,sep07,oct07,nov07,dec07), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan06b = text.get_text()
+    jan06.append(jan06b)
+    
+print(jan06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb06b = text.get_text()
+    feb06.append(feb06b)
+    
+print(feb06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar06b = text.get_text()
+    mar06.append(mar06b)
+    
+print(mar06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr06b = text.get_text()
+    apr06.append(apr06b)
+    
+print(apr06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may06b = text.get_text()
+    may06.append(may06b)
+    
+print(may06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun06b = text.get_text()
+    jun06.append(jun06b)
+    
+print(jun06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul06b = text.get_text()
+    jul06.append(jul06b)
+    
+print(jul06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug06b = text.get_text()
+    aug06.append(aug06b)
+    
+print(aug06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep06b = text.get_text()
+    sep06.append(sep06b)
+    
+print(sep06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct06b = text.get_text()
+    oct06.append(oct06b)
+    
+print(oct06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov06b = text.get_text()
+    nov06.append(nov06b)
+    
+print(nov06)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2006'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec06 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec06b = text.get_text()
+    dec06.append(dec06b)
+    
+print(dec06)
+
+deaths_in_2006 = numpy.concatenate((jan06,feb06,mar06,apr06,may06,jun06,jul06,aug06,sep06,oct06,nov06,dec06), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan05b = text.get_text()
+    jan05.append(jan05b)
+    
+print(jan05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb05b = text.get_text()
+    feb05.append(feb05b)
+    
+print(feb05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar05b = text.get_text()
+    mar05.append(mar05b)
+    
+print(mar05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr05b = text.get_text()
+    apr05.append(apr05b)
+    
+print(apr05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may05b = text.get_text()
+    may05.append(may05b)
+    
+print(may05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun05b = text.get_text()
+    jun05.append(jun05b)
+    
+print(jun05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul05b = text.get_text()
+    jul05.append(jul05b)
+    
+print(jul05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug05b = text.get_text()
+    aug05.append(aug05b)
+    
+print(aug05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep05b = text.get_text()
+    sep05.append(sep05b)
+    
+print(sep05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct05b = text.get_text()
+    oct05.append(oct05b)
+    
+print(oct05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov05b = text.get_text()
+    nov05.append(nov05b)
+    
+print(nov05)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2005'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec05 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec05b = text.get_text()
+    dec05.append(dec05b)
+    
+print(dec05)
+
+deaths_in_2005 = numpy.concatenate((jan05,feb05,mar05,apr05,may05,jun05,jul05,aug05,sep05,oct05,nov05,dec05), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan04b = text.get_text()
+    jan04.append(jan04b)
+    
+print(jan04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb04b = text.get_text()
+    feb04.append(feb04b)
+    
+print(feb04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar04b = text.get_text()
+    mar04.append(mar04b)
+    
+print(mar04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr04b = text.get_text()
+    apr04.append(apr04b)
+    
+print(apr04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may04b = text.get_text()
+    may04.append(may04b)
+    
+print(may04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun04b = text.get_text()
+    jun04.append(jun04b)
+    
+print(jun04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul04b = text.get_text()
+    jul04.append(jul04b)
+    
+print(jul04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug04b = text.get_text()
+    aug04.append(aug04b)
+    
+print(aug04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep04b = text.get_text()
+    sep04.append(sep04b)
+    
+print(sep04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct04b = text.get_text()
+    oct04.append(oct04b)
+    
+print(oct04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov04b = text.get_text()
+    nov04.append(nov04b)
+    
+print(nov04)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2004'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec04 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec04b = text.get_text()
+    dec04.append(dec04b)
+    
+print(dec04)
+
+deaths_in_2004 = numpy.concatenate((jan04,feb04,mar04,apr04,may04,jun04,jul04,aug04,sep04,oct04,nov04,dec04), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan03b = text.get_text()
+    jan03.append(jan03b)
+    
+print(jan03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb03b = text.get_text()
+    feb03.append(feb03b)
+    
+print(feb03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar03b = text.get_text()
+    mar03.append(mar03b)
+    
+print(mar03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr03b = text.get_text()
+    apr03.append(apr03b)
+    
+print(apr03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may03b = text.get_text()
+    may03.append(may03b)
+    
+print(may03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun03b = text.get_text()
+    jun03.append(jun03b)
+    
+print(jun03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul03b = text.get_text()
+    jul03.append(jul03b)
+    
+print(jul03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug03b = text.get_text()
+    aug03.append(aug03b)
+    
+print(aug03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep03b = text.get_text()
+    sep03.append(sep03b)
+    
+print(sep03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct03b = text.get_text()
+    oct03.append(oct03b)
+    
+print(oct03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov03b = text.get_text()
+    nov03.append(nov03b)
+    
+print(nov03)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2003'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec03 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec03b = text.get_text()
+    dec03.append(dec03b)
+    
+print(dec03)
+
+deaths_in_2003 = numpy.concatenate((jan03,feb03,mar03,apr03,may03,jun03,jul03,aug03,sep03,oct03,nov03,dec03), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan02b = text.get_text()
+    jan02.append(jan02b)
+    
+print(jan02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb02b = text.get_text()
+    feb02.append(feb02b)
+    
+print(feb02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar02b = text.get_text()
+    mar02.append(mar02b)
+    
+print(mar02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr02b = text.get_text()
+    apr02.append(apr02b)
+    
+print(apr02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may02b = text.get_text()
+    may02.append(may02b)
+    
+print(may02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun02b = text.get_text()
+    jun02.append(jun02b)
+    
+print(jun02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul02b = text.get_text()
+    jul02.append(jul02b)
+    
+print(jul02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug02b = text.get_text()
+    aug02.append(aug02b)
+    
+print(aug02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep02b = text.get_text()
+    sep02.append(sep02b)
+    
+print(sep02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct02b = text.get_text()
+    oct02.append(oct02b)
+    
+print(oct02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov02b = text.get_text()
+    nov02.append(nov02b)
+    
+print(nov02)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2002'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec02 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec02b = text.get_text()
+    dec02.append(dec02b)
+    
+print(dec02)
+
+deaths_in_2002 = numpy.concatenate((jan02,feb02,mar02,apr02,may02,jun02,jul02,aug02,sep02,oct02,nov02,dec02), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan01b = text.get_text()
+    jan01.append(jan01b)
+    
+print(jan01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb01b = text.get_text()
+    feb01.append(feb01b)
+    
+print(feb01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar01b = text.get_text()
+    mar01.append(mar01b)
+    
+print(mar01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr01b = text.get_text()
+    apr01.append(apr01b)
+    
+print(apr01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may01b = text.get_text()
+    may01.append(may01b)
+    
+print(may01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun01b = text.get_text()
+    jun01.append(jun01b)
+    
+print(jun01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul01b = text.get_text()
+    jul01.append(jul01b)
+    
+print(jul01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug01b = text.get_text()
+    aug01.append(aug01b)
+    
+print(aug01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep01b = text.get_text()
+    sep01.append(sep01b)
+    
+print(sep01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct01b = text.get_text()
+    oct01.append(oct01b)
+    
+print(oct01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov01b = text.get_text()
+    nov01.append(nov01b)
+    
+print(nov01)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2001'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec01 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec01b = text.get_text()
+    dec01.append(dec01b)
+    
+print(dec01)
+
+deaths_in_2001 = numpy.concatenate((jan01,feb01,mar01,apr01,may01,jun01,jul01,aug01,sep01,oct01,nov01,dec01), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan00b = text.get_text()
+    jan00.append(jan00b)
+    
+print(jan00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb00b = text.get_text()
+    feb00.append(feb00b)
+    
+print(feb00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar00b = text.get_text()
+    mar00.append(mar00b)
+    
+print(mar00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr00b = text.get_text()
+    apr00.append(apr00b)
+    
+print(apr00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may00b = text.get_text()
+    may00.append(may00b)
+    
+print(may00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun00b = text.get_text()
+    jun00.append(jun00b)
+    
+print(jun00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul00b = text.get_text()
+    jul00.append(jul00b)
+    
+print(jul00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug00b = text.get_text()
+    aug00.append(aug00b)
+    
+print(aug00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep00b = text.get_text()
+    sep00.append(sep00b)
+    
+print(sep00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct00b = text.get_text()
+    oct00.append(oct00b)
+    
+print(oct00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov00b = text.get_text()
+    nov00.append(nov00b)
+    
+print(nov00)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_2000'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec00 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec00b = text.get_text()
+    dec00.append(dec00b)
+    
+print(dec00)
+
+deaths_in_2000 = numpy.concatenate((jan00,feb00,mar00,apr00,may00,jun00,jul00,aug00,sep00,oct00,nov00,dec00), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan99b = text.get_text()
+    jan99.append(jan99b)
+    
+print(jan99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb99b = text.get_text()
+    feb99.append(feb99b)
+    
+print(feb99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar99b = text.get_text()
+    mar99.append(mar99b)
+    
+print(mar99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr99b = text.get_text()
+    apr99.append(apr99b)
+    
+print(apr99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may99b = text.get_text()
+    may99.append(may99b)
+    
+print(may99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun99b = text.get_text()
+    jun99.append(jun99b)
+    
+print(jun99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul99b = text.get_text()
+    jul99.append(jul99b)
+    
+print(jul99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug99b = text.get_text()
+    aug99.append(aug99b)
+    
+print(aug99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep99b = text.get_text()
+    sep99.append(sep99b)
+    
+print(sep99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct99b = text.get_text()
+    oct99.append(oct99b)
+    
+print(oct99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov99b = text.get_text()
+    nov99.append(nov99b)
+    
+print(nov99)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_1999'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec99 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec99b = text.get_text()
+    dec99.append(dec99b)
+    
+print(dec99)
+
+deaths_in_1999 = numpy.concatenate((jan99,feb99,mar99,apr99,may99,jun99,jul99,aug99,sep99,oct99,nov99,dec99), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan98b = text.get_text()
+    jan98.append(jan98b)
+    
+print(jan98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb98b = text.get_text()
+    feb98.append(feb98b)
+    
+print(feb98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar98b = text.get_text()
+    mar98.append(mar98b)
+    
+print(mar98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr98b = text.get_text()
+    apr98.append(apr98b)
+    
+print(apr98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may98b = text.get_text()
+    may98.append(may98b)
+    
+print(may98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun98b = text.get_text()
+    jun98.append(jun98b)
+    
+print(jun98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul98b = text.get_text()
+    jul98.append(jul98b)
+    
+print(jul98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug98b = text.get_text()
+    aug98.append(aug98b)
+    
+print(aug98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep98b = text.get_text()
+    sep98.append(sep98b)
+    
+print(sep98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct98b = text.get_text()
+    oct98.append(oct98b)
+    
+print(oct98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov98b = text.get_text()
+    nov98.append(nov98b)
+    
+print(nov98)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_1998'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec98 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec98b = text.get_text()
+    dec98.append(dec98b)
+    
+print(dec98)
+
+deaths_in_1998 = numpy.concatenate((jan98,feb98,mar98,apr98,may98,jun98,jul98,aug98,sep98,oct98,nov98,dec98), axis=0)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_January_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jan97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jan97b = text.get_text()
+    jan97.append(jan97b)
+    
+print(jan97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_February_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+feb97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    feb97b = text.get_text()
+    feb97.append(feb97b)
+    
+print(feb97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_March_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+mar97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    mar97b = text.get_text()
+    mar97.append(mar97b)
+    
+print(mar97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_April_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+apr97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    apr97b = text.get_text()
+    apr97.append(apr97b)
+    
+print(apr97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_May_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+may97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    may97b = text.get_text()
+    may97.append(may97b)
+    
+print(may97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_June_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jun97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jun97b = text.get_text()
+    jun97.append(jun97b)
+    
+print(jun97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_July_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+jul97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    jul97b = text.get_text()
+    jul97.append(jul97b)
+    
+print(jul97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_Aug_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+aug97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    aug97b = text.get_text()
+    aug97.append(aug97b)
+    
+print(aug97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_September_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+sep97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    sep97b = text.get_text()
+    sep97.append(sep97b)
+    
+print(sep97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_October_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+oct97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    oct97b = text.get_text()
+    oct97.append(oct97b)
+    
+print(oct97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_November_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+nov97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    nov97b = text.get_text()
+    nov97.append(nov97b)
+    
+print(nov97)
+
+url = 'https://en.wikipedia.org/wiki/Deaths_in_December_1997'
+r = requests.get(url)
+s = BeautifulSoup(r.content, 'lxml')
+
+dec97 = []
+for text in s.select(".mw-parser-output h2:nth-of-type(1), .mw-parser-output h3, .mw-parser-output ul:nth-of-type(n+2) > li"):
+    dec97b = text.get_text()
+    dec97.append(dec97b)
+    
+print(dec97)
+
+deaths_in_1997 = numpy.concatenate((jan97,feb97,mar97,apr97,may97,jun97,jul97,aug97,sep97,oct97,nov97,dec97), axis=0)
+
+raw_data_complete_list = numpy.concatenate((deaths_in_1997,deaths_in_1998,deaths_in_1999,deaths_in_2000,deaths_in_2001,deaths_in_2002,deaths_in_2003,deaths_in_2004,deaths_in_2005,deaths_in_2006,deaths_in_2007,deaths_in_2008,deaths_in_2009,deaths_in_2010,deaths_in_2011,deaths_in_2012,deaths_in_2013,deaths_in_2014,deaths_in_2015,deaths_in_2016,deaths_in_2017,deaths_in_2018), axis=0)
+
+
+csv.register_dialect('myDialect',
+delimiter=';'
+#quoting=csv.QUOTE_ALL,
+#skipinitialspace=True
+)
+
+with open(r"C:\Users\ccorr\Desktop\MIS4596\test25.csv","w",encoding="utf-8") as f:
+    writer = csv.writer(f,dialect="myDialect")
+    writer.writerows(raw_data_complete_list)
